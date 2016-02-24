@@ -1,0 +1,21 @@
+.ptl{
+  padding-top: 10px;
+}
+
+.mtl {
+  margin-top: 10px;
+}
+
+.mal {
+  margin: 10px;
+}
+
+* {
+    font-size:22px;
+    font-size:1.375rem;
+}
+
+.panel > .panel-heading {
+  background: #0065a1;
+  color: #fff;
+}

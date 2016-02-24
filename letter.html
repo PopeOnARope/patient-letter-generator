@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Letter Generator</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h4>Medtronic Inc</h4>
+        <h4>Neuromodulation</h4>
+        <p>http://medtronic.com</p>
+        <br>
+        <p class="text-muted"><span data-name="rep-phone"></span></p>
+        <p class="text-muted"><span data-name="rep-email"></span></p>
+      </div>
+      <div class="col-md-10">
+        <div class="panel">
+          <div class="panel-body">
+            <p><span data-name="todays-date"></span></p>
+            <p>Dear Dr. <span data-name="referring-dr"></span></p>
+
+            <p>Thank you for referring <span data-name="patient-name"></span> to <span data-name="trialing-dr"></span> for evaluation of chronic pain symptoms relating to <span data-name="indication"></span></p>
+
+            <p>An implanting procedure was conducted on <span data-name="case-date"></span> by <span data-name="implanting-dr-name"></span> The patient was implanted with Medtronic’s <span data-name="device"></span> and programmed same day by a Medtronic Representative.</p>
+
+            <p>Enclosed are diagrams of <span data-name="patient-first-name"></span> pain geography reported pre-implant, and then stimulation coverage four weeks post-operatively. The patient has reported a pre-surgical pain score of <span data-name="pre-pain"></span> followed by a post-surgical pain score of <span data-name="post-pain"></span> showing an improvement of <span data-name="pain-score"></span>.</p>
+            <p>Patient has also reported functional improvements in <span data-name="activities"></span>.</p>
+
+            <p>I look forward to working with you in qualifying future candidates to receive chronic pain relief.</p>
+            <p><span data-name="signature"></span></p>
+
+            <p>Medtronic, Inc. Neuromodulation</p>
+
+            <p>Enclosure:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
