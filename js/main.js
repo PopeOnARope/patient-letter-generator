@@ -1,6 +1,6 @@
 $(function () {
   console.log('testing');
-  $('.date').val(moment().format('MM/DD/YYYY')).datepicker();
+  $('.date').datepicker();
 
   var reps = {
     'Omar Hadi': {
