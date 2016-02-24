@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Letter Generator</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <a href="letter.html">letter</a>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="header app-header"><img src="logo.png" alt=""></div>
+        <div class="panel panel-default mtl">
+          <div class="panel-heading"><h3>Patient Referral</h3></div>
+          <div class="panel-body">
+            <form action="">
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Please complete the fields below to generate your patient referral letter.</p>
+
+                  <div class="input-group input-group-sm col-md-3">
+                    <label for="todays-date">
+                      Today's Date
+                    </label>
+                    <input type="text" class="form-control date" name="todays-date">
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="referring-dr">
+                      Referring Physician's Name
+                    </label>
+                    <input type="text" class="form-control" name="referring-dr">
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="patient-name">
+                      Patient's Name
+                    </label>
+                    <input type="text" class="form-control" name="patient-name">
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="trialing-dr">
+                      Trialing Physician
+                    </label>
+                    <select type="text" class="form-control" name="trialing-dr">
+                      <option value="Dr. Joseph Stapleton">Dr. Joseph Stapleton</option>
+                      <option value="Dr. Ben Platt">Dr. Ben Platt</option>
+                      <option value="Dr. Edward Lairson">Dr. Edward Lairson</option>
+                      <option value="other">other</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="indication">
+                      Indications
+                    </label>
+                    <select type="text" class="form-control" name="indication">
+                      <option value="radiculopathy">radiculopathy</option>
+                      <option value="postlaminectomy pain">postlaminectomy pain</option>
+                      <option value="epidural fibrosis">epidural fibrosis</option>
+                      <option value="degenerative disc disease">degenerative disc disease</option>
+                      <option value="causalgia">causalgia</option>
+                      <option value="failed back surgery syndrome">failed back surgery syndrome</option>
+                      <option value="complex regional pain syndrome">complex regional pain syndrome</option>
+                      <option value="arachoiditis">arachoiditis</option>
+                      <option value="other">other</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-3">
+                    <label for="case-date">
+                      Case Date
+                    </label>
+                    <input type="text" class="form-control date" name="case-date">
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="implanting-dr-name">
+                      Implanting Physician's Name
+                    </label>
+                    <select type="text" class="form-control" name="implanting-dr-name">
+                      <option value="Dr. Martin Baggenstos">Dr. Martin Baggenstos</option>
+                      <option value="Dr. Rafe Sales">Dr. Rafe Sales</option>
+                      <option value="Dr. Brett Ball">Dr. Brett Ball</option>
+                      <option value="Dr. Ben Platt">Dr. Ben Platt</option>
+                      <option value="Dr. Alex Ching">Dr. Alex Ching</option>
+                      <option value="Dr. Michael Sandquist">Dr. Michael Sandquist</option>
+                      <option value="other">other</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="device">
+                      Device
+                    </label>
+                    <select type="text" class="form-control" name="device">
+                      <option value="Spinal Cord Stimulator"> Spinal Cord Stimulator</option>
+                      <option value="Pain Pump"> Pain Pump</option>
+                      <option value="Baclofen Pump"> Baclofen Pump</option>
+                      <option value="Malignant Pain Pump"> Malignant Pain Pump</option>
+                      <option value="other">other</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-2">
+                    <label for="pre-pain">
+                      Pre-Pain Score
+                    </label>
+                    <select type="text" class="form-control" name="pre-pain">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-2">
+                    <label for="post-pain">
+                      Post-Pain Score
+                    </label>
+                    <select type="text" class="form-control" name="post-pain">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-2">
+                    <label for="pain-score">
+                      Pain improvement:
+                    </label>
+                    <span class="pain-score"></span>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="activities">
+                      Patient's Improved Activities
+                    </label>
+                    <input type="text" class="form-control" name="activities">
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="rep-name">
+                      Rep Name
+                    </label>
+                    <select class="form-control" name="rep-name">
+                      <option value='Omar Hadi'>Omar Hadi</option>
+                      <option value='Allison Parshall'>Allison Parshall</option>
+                      <option value='Patricia Sanders'>Patricia Sanders</option>
+
+                    </select>
+                  </div>
+
+                  <div class="input-group input-group-sm col-md-6">
+                    <label for="rep-email">
+                      Rep email
+                    </label>
+                    <input type="text" class="form-control" name="rep-email">
+                  </div>
+
+                </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-md-12 mtl">
+                    <a class="btn btn-md btn-primary">Generate letter</a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display:none">
+    <div class="letter" style="display:none">
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>Patient Letter Generator</title>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="node_modules/moment/moment.js"></script>
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="js/main.js"></script>
+      </head>
+      <body>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <h4>Medtronic Inc</h4>
+              <h4>Neuromodulation</h4>
+              <p>http://medtronic.com</p>
+              <br>
+              <p class="text-muted"><span data-name="rep-phone"></span></p>
+              <p class="text-muted"><span data-name="rep-email"></span></p>
+            </div>
+            <div class="col-md-9">
+              <div class="panel">
+                <div class="panel-body">
+                  <p><span data-name="todays-date"></span></p>
+                  <p>Dear Dr. <span data-name="referring-dr"></span>,</p>
+
+                  <p>Thank you for referring <span data-name="patient-name"></span> to <span data-name="trialing-dr"></span> for evaluation of chronic pain symptoms relating to <span data-name="indication"></span>.</p>
+
+                  <p>An implanting procedure was conducted on <span data-name="case-date"></span> by <span data-name="implanting-dr-name"></span>. The patient was implanted with Medtronic’s <span data-name="device"></span> and programmed same day by a Medtronic Representative.</p>
+
+                  <p>Enclosed are diagrams of <span data-name="patient-first-name"></span>'s pain geography reported pre-implant, and then stimulation coverage four weeks post-operatively. The patient has reported a pre-surgical pain score of <strong><span data-name="pre-pain"></span></strong> followed by a post-surgical pain score of <strong><span data-name="post-pain"></span></strong> showing an improvement of <strong><span data-name="pain-score"></span>%</strong>.</p>
+                  <p>Patient has also reported functional improvements in <span data-name="activities"></span>.</p>
+
+                  <p>I look forward to working with you in qualifying future candidates to receive chronic pain relief.</p>
+                  <br>
+                  <br>
+                  <p><span data-name="rep-name"></span></p>
+                  <br>
+                  <br>
+                  <p>Medtronic, Inc. Neuromodulation</p>
+                  <p class="text-muted">Enclosure:</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+      </html>
+    </div>
+  </div>
+
+</body>
+
+</html>
